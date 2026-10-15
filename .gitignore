@@ -1,0 +1,14 @@
+# Unity .gitignore
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+*.log
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+.vscode/
