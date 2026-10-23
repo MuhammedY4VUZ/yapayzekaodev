@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// 3. Hafta: Ekranda kontrolleri, Gözcü durumunu (Gördü / Gizlendi)
@@ -16,7 +17,11 @@ public class Hafta3HUD : MonoBehaviour
     void Update()
     {
         // [T] Tuşu: CharacterController ile Rigidbody karakterleri arasında geçiş yap
-        if (Input.GetKeyDown(KeyCode.T))
+        bool tPressed = false;
+        if (Keyboard.current != null)
+            tPressed = Keyboard.current.tKey.wasPressedThisFrame;
+
+        if (tPressed)
         {
             ccAktif = !ccAktif;
             if (oyuncuCC != null) oyuncuCC.SetActive(ccAktif);
